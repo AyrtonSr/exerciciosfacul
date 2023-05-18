@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+
+int cont=0, i;
+
+while (cont<1000){
+
+if ((cont%2)==0){
+
+printf ("No. Pat= %i \n", cont);
+
+}else{
+
+for (i=0;i<10;i++){
+
+printf("Contador Interno = %i \n" , i+1);
+
+}
+
+}
+cont++;
+}
+
+return 0;
+}
