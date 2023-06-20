@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+
+printf("Escolha qual exercicio gostaria de fazer: \n");
+printf("Definir uma matriz 50x50 de inteiros, preencher automaticamente");
+printf("com numeros sequenciais de 0 a 50 e exibir o resultado                  = 1\n");
+printf("Definir duas matrizes 10 x10 de inteiros, preencher com numeros");
+printf("aleatorios, realizar a soma entre as duas matrizes e exibir o resultado = 2\n");
+printf("Definir uma matriz 5x5 de inteiros, solicitar do usuário que digite a 
+printf("quantidade de elementos, e preencher automaticamente");
+
+
+
+return 0;
+}
