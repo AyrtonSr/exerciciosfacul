@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include<stdlib.h>
+int matriz50[50][50], matriz10[10][10], m2atriz10[10][10];
+
+// PROTOTIPO
+void matrix50();
+void somaM();
+//IMPLEMENTAR
+
+void matriz5(){
+    int linha,coluna, cont=0;
+    for (linha = 0;linha<50;linha++){
+        for (coluna=0;coluna<51;coluna++){
+            matriz50[linha][coluna] = cont;
+            printf("%i ", matriz50[linha][coluna]);
+            cont++;
+        }
+        cont=0;
+      printf("\n");
+    }
+
+}
+
+void somaM(){
+int linha, coluna
+
+}
+
+
+int main(){
+
+int opcao;
+
+printf("Escolha qual exercicio gostaria de fazer: \n");
+printf("Definir uma matriz 50x50 de inteiros, preencher automaticamente");
+printf("com numeros sequenciais de 0 a 50 e exibir o resultado                  = 1\n");
+printf("Definir duas matrizes 10x10 de inteiros, preencher com numeros");
+printf("aleatorios, realizar a soma entre as duas matrizes e exibir o resultado = 2\n");
+printf("Definir uma matriz 5x5 de inteiros, solicitar do usuário que digite");
+printf("quantidade de elementos, e preencher automaticamente                = 3\n");
+scanf("%i", &opcao);
+
+switch (opcao){
+case 1:
+    matriz5();
+    break;
+case 2:
+    somaM();
+    break:
+
+
+}
+
+
+
+
+return 0;
+}
