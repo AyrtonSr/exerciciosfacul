@@ -1,0 +1,85 @@
+#include<stdlib.h>
+#include<stdio.h>
+
+#define nmaximo 30
+
+typedef struct {
+   char	  disciplina[30], situacao, nome[50];
+   float  notas[5];
+   int	  faltas, matricula;
+} HistoricoEscolar;
+
+//PROTOTIPOS
+void fichaAdicionar (HistoricoEscolar *fichaAluno);
+
+
+
+//IMPLEMENTAÇÃO
+void fichaAdicionar (HistoricoEscolar *fichaAluno){
+int j,i;
+for (i=0;i<30;i++){
+   printf("\nInforme o nome do Aluno\n");
+   fgets(fichaAluno[i].nome, 50, stdin);
+   printf("\nInforme a Disciplina\n");
+   fgets(fichaAluno[i].disciplina, 30, stdin);
+   for(j=1;j<=4;j++){
+    printf("\nInforme a nota %i", j);
+    scanf("%f", &fichaAluno->notas[j]);
+   }
+   fichaAluno->notas[5]=(fichaAluno->notas[0]+fichaAluno->notas[1]+fichaAluno->notas[2]+fichaAluno->notas[3])/4;
+   printf("\nInforme o numero de faltas\n");
+   scanf(" %i", &fichaAluno->faltas);
+   while ((getchar()) != '\n');
+   system("cls");
+   printf("\n***********Ficha do Aluno***********\n");
+   printf("\nNome: %s",fichaAluno->nome);
+   printf("\nDisciplina: %s",fichaAluno->disciplina);
+   printf("\nNota1: %f",fichaAluno->notas[0]);
+   printf("\nNota2: %f",fichaAluno->notas[1]);
+   printf("\nNota3: %f",fichaAluno->notas[2]);
+   printf("\nNota4: %f",fichaAluno->notas[3]);
+   printf("\nMedia: %.2f",fichaAluno->notas[4]);
+   printf("\nFaltas: ",fichaAluno->faltas);
+   printf("\nMatricula");
+}
+
+}
+
+int main(){
+
+int sairounao=0, opcao, i;
+HistoricoEscolar fichaAluno[nmaximo];
+
+    while (sairounao==0){
+    printf("******************BEM VINDO******************\n");
+    printf("\nESCOLHA UMA DAS OPCOES A BAIXO\n");
+    printf("\n1-Adicionar");
+    printf("\n2-Pesquisar");
+    printf("\n3-Atualizar");
+    printf("\n4-Excluir");
+    printf("\n5-Sair\n");
+    scanf("%i", &opcao);
+
+        switch (opcao){
+        case 1:
+            fichaAdicionar(&fichaAluno[i]);
+            i++;
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        case 4:
+            break;
+        case 5:
+            sairounao=1;
+            break;
+        default:
+            printf("\nEssa opcao nao existe, por favor preencha novamente com uma opcao valida");
+        }
+
+
+    }
+
+return 0;
+}
